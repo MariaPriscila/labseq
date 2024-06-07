@@ -1,0 +1,26 @@
+.container {
+  margin-top: 100px;
+  display: flex;
+  place-content: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  max-width: 400px;
+  margin-bottom: 8px;
+}
+
+.result {
+  margin-top: 10px;
+}
+
+.danger {
+  color: red;
+}
+.success {
+  color: green;
+}

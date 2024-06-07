@@ -1,0 +1,22 @@
+<div class="container">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>LabSeq Challenge</mat-card-title>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+        <mat-form-field floatLabel="always">
+          <mat-label>N value</mat-label>
+          <input matInput formControlName="number" type="number" class="example-right-align" placeholder="0" />
+        </mat-form-field>
+        <button mat-stroked-button type="submit" [disabled]="isInvalid">Submit</button>
+      </form>
+      <div class="result" *ngIf="response !== ''">
+        <div class="danger" role="alert" *ngIf="error">{{ response }}</div>
+        <div class="success" role="alert" *ngIf="!error">The result is {{ response }}</div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
